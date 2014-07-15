@@ -9,7 +9,7 @@ def get_collection(database, name):
         collection = database[name]
 
         if not collection.options().get('capped'):
-            raise TypeError('Collection "{0}" is not capped!' % name)
+            raise TypeError('Collection "%s" is not capped!' % name)
 
     else:
         collection = database.create_collection(name,
